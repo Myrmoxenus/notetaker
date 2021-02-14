@@ -35,7 +35,7 @@ class note {
 //Reassings IDs of every note in database to correspond to its order
 function reassign(){
     for(i=0;i<noteDatabase.length;i++){
-        noteDatabase[i].id = i
+        noteDatabase[i].id = i + 1
     }
 }
 
@@ -54,8 +54,8 @@ res.json(noteDatabase)
 
 //Deletes selected note
 app.delete('/api/notes/:id', function(req, res){
-noteDatabase.splice(req.params.id, 1)
 reassign()
+noteDatabase.splice(req.params.id, 1)
 res.json(noteDatabase)
 })
 
