@@ -48,7 +48,7 @@ app.get('/api/notes', function(req, res){
 //Creates a new note
 app.post('/api/notes', function(req, res){
 reassign()
-noteDatabase.push(new note(noteDatabase.length,  req.body.title, req.body.text))
+noteDatabase.push(new note(noteDatabase.length + 1,  req.body.title, req.body.text))
 res.json(noteDatabase)
 })
 
@@ -64,5 +64,3 @@ app.get('*', function(req, res){
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
-// Runs reassign at startup
-reassign()
