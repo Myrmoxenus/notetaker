@@ -37,6 +37,7 @@ function reassign(){
     for(i=0;i<noteDatabase.length;i++){
         noteDatabase[i].id = i + 1
     }
+    console.log(noteDatabase)
 }
 
 //Handlers
@@ -47,14 +48,14 @@ app.get('/api/notes', function(req, res){
 
 //Creates a new note
 app.post('/api/notes', function(req, res){
+noteDatabase.push(new note((noteDatabase.length + 1),  req.body.title, req.body.text))
 reassign()
-noteDatabase.push(new note(noteDatabase.length + 1,  req.body.title, req.body.text))
 res.json(noteDatabase)
 })
 
 //Deletes selected note
 app.delete('/api/notes/:id', function(req, res){
-noteDatabase.splice(req.params.id, 1)
+noteDatabase.splice((req.params.id - 1), 1)
 reassign()
 res.json(noteDatabase)
 })
