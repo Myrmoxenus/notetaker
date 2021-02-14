@@ -54,8 +54,8 @@ res.json(noteDatabase)
 
 //Deletes selected note
 app.delete('/api/notes/:id', function(req, res){
-reassign()
 noteDatabase.splice(req.params.id, 1)
+reassign()
 res.json(noteDatabase)
 })
 
@@ -64,3 +64,5 @@ app.get('*', function(req, res){
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
+// Runs reassign at startup
+reassign()
