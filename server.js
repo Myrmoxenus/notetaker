@@ -35,7 +35,7 @@ class note {
 //Reassings IDs of every note in database to correspond to its order
 function reassign(){
     for(i=0;i<noteDatabase.length;i++){
-        noteDatabase[i].id = i + 1
+        noteDatabase[i].id = i
     }
 }
 
