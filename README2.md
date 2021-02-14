@@ -1,25 +1,26 @@
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# Good ReadME Generator
+# NoteTaker
 
 ## Table of Contents
 
 1. [Description](#description)
-2. [Installation](#installation)
+2. [Link](#Link)
 3. [Usage](#usage)
 4. [License](#license)
 5. [Screenshot](#screenshot)
-6. [Walkthrough Video](#walkthrough)
+
 
 
 ## Description:
-Completed as a homework assignment for Washington University's Fullstack Web Development Program. The purpurpose of the application is using inquirer.js to ask the user for a series of prompts, the responses to which will be compiled into a md file with formatting appropriate for a ReadMe.
+Completed as a homework assignment for Washington University's Fullstack Web Development Program. The purpose of the application was to develop the back end for a note taking application to help become familiar with express.js. The front end was prepared by the program. The application can be used to compose, save, and delete notes. Notes are stored in a JSON file.
 
-## Installation: 
-First run npm install to install the required npm dependencies. From there, the application can be run from the command line using "node app.js".
+## Link: 
+[Application deployed here via Heroku!](https://warm-anchorage-12496.herokuapp.com/)
 
 ## Usage:
-Upon running the application, it will prompt the user with the headers requested by the assignment. The user can enter the appropriate text and the application will appropriately format a ReadME.
+Press the "Get Started" button to access the notes page. On the notes page, you can type in the boxes for Note Title and Note Text. Once a title and text has been entered, a save icon appears in the upper right corner which allows you to save notes. Saved notes are displayed and can be selected from the leftmost column of the application. The trash icon deletes notes.
+
 
 ## License: 
 MIT
@@ -28,7 +29,5 @@ MIT
 [Myrmoxenus](https://github.com/Myrmoxenus)
 
 ## Screenshot: 
-![Screenshot of ReadMe Generator in Use](Images/screenshot.png)
+![Screenshot of NoteTaker](Images/screenshot.png)
 
-## Walkthrough:
-[Link to Walkthrough Video!](https://drive.google.com/drive/folders/14_x_SZZa_f6u6mtyQxYZtJMleikLuig4?usp=sharing)
